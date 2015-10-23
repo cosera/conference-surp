@@ -25,7 +25,6 @@
     });
     $('.navbar-toggle').on('click', function(e) {
       $('#slidemenu').slideToggle();
-      // $(this).addClass('active');
     });      
   })
   </script>
@@ -33,10 +32,8 @@
 <body ng-controller="mainController">
   <div class="container-fluid">
   <header>
-    <!-- <nav class="navbar navbar-default"> -->
-    <!-- <div class="container-fluid"> -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" id="horizontal-nav">
-      <ul class="nav nav-pills nav-justified" >
+    <nav class="navbar navbar-default collapse navbar-collapse" id="horizontal-nav">
+      <ul class="nav nav-pills nav-justified">
         <li><a href="#/"> Home</a></li>
         <li><a href="#2011"> 2011 Green Urbanism</a></li>
         <li><a href="#2013">2013 Smarter Cities</a></li>
@@ -50,10 +47,7 @@
         <li><a href="#philippine-planning">Philippine Planning Journal</a></li>
         <li><a href="#public-lecture">Public Lecture</a></li>
       </ul>
-
-    </div>
-    <!-- </div> -->
-    <!-- </nav> -->
+    </nav>
      
     <div class="navbar navbar-default" role="navigation" id="vertical-nav">
       <div class="container">
@@ -65,14 +59,14 @@
          </a>
         <a class="navbar-brand">SURP Online Resources</a>
        </div>
-    </div>
+    
     <div id="slidemenu">
        <ul class="nav nav-pills nav-stacked" >
         <li><a href="#/"> Home</a></li>
         <li><a href="#2011"> 2011 Green Urbanism</a></li>
         <li><a href="#2013">2013 Smarter Cities</a></li>
         <li class="dropdown">
-          <a role="button" data-toggle="collapse" href="#jurp1" aria-expanded="true" aria-controls="collapseOne">Journal in Urban and Regional Planning <span class="caret"></span></a>
+          <a role="button" data-toggle="collapse" href="#jurp1" aria-expanded="true">Journal in Urban and Regional Planning <span class="caret"></span></a>
           <ul id="jurp1" class="collapse out nav nav-pills nav-stacked">
             <li><a href="#jurp1">JURP 1</a></li>
             <li><a href="#jurp2">JURP 2</a></li>
@@ -82,7 +76,7 @@
         <li><a href="#public-lecture">Public Lecture</a></li>
       </ul>
     </div>
-
+    </div>
   </header>
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
