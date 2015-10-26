@@ -1,11 +1,12 @@
 <div class="jumbotron text-center">
-  <h1>Home</h1>
+  <h1>Home {{ search }}</h1>
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Search for...">
+  <input type="text" class="form-control" placeholder="Search for..." ng-model="searchbox" id="searchbox" onkeypress="if (event.which==13) document.getElementById('go-search').click()">
   <span class="input-group-btn">
-    <a href="#search" class="btn btn-info" role="button"><i class="glyphicon glyphicon-search"></i></a>
+    <a href="#search?input={{ searchbox }}" class="btn btn-info" role="button" ng-click="fetchResults()" id="go-search"><i class="glyphicon glyphicon-search"></i></a>
   </span>
 </div>
+
 

@@ -1,5 +1,10 @@
-<div ng-repeat="filegrp in filegrps">
-  <div ng-repeat="files in filegrp.files">
+<div class="right-inner-addon">
+  <i class="glyphicon glyphicon-search"></i>
+  <input type="search" ng-model="search.title" ng-init="search.title=query" class="form-control">
+</div>
+
+<div ng-repeat="filegrp in filegrps ">
+  <div ng-repeat="files in filegrp.files | filter:search">
   	<!-- <div ng-repeat="file in files"> -->
   		<h4>{{ files.title }} {{ filegrp.grpname }}</h4>
   	<!-- </div> -->

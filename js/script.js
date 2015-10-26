@@ -46,15 +46,19 @@ surpApp.controller('mainController', ['$scope', '$http',
         $scope.filegrps = data.files;
         console.log($scope.filegrps)
       });
+      $scope.searchbox = '';
+      $scope.fetchResults = function(){
+        console.log($scope.searchbox);
+      };
   
 }]);
 
-surpApp.controller('searchController', ['$scope', '$http',
-  function($scope, $http) {
+surpApp.controller('searchController', ['$scope', '$http', '$location',
+  function($scope, $http, $location) {
       $http.get('js/data.json').success(function(data) {
         $scope.filegrps = data.files;
-        console.log($scope.filegrps)
       });
+      $scope.query = $location.search().input
   
 }]);
 
