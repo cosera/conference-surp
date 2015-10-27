@@ -1,12 +1,19 @@
-<div class="jumbotron text-center">
-  <h1>Home {{ search }}</h1>
+<div id="large-home" class="jumbotron text-center container">
+  <h1 id="welcome-text">Welcome to <br/>SURP Online Resources</h1>
+  <div class="input-group input-group-lg">
+    <input type="text" class="form-control" placeholder="Search for..." ng-model="searchbox" id="searchbox" onkeypress="if (event.which==13) document.getElementById('go-search').click()">
+    <span class="input-group-btn">
+      <a href="#search?q={{ searchbox }}" class="btn btn-info" role="button"id="go-search"><i class="glyphicon glyphicon-search"></i></a>
+    </span>
+  </div>
 </div>
 
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Search for..." ng-model="searchbox" id="searchbox" onkeypress="if (event.which==13) document.getElementById('go-search').click()">
-  <span class="input-group-btn">
-    <a href="#search?input={{ searchbox }}" class="btn btn-info" role="button" ng-click="fetchResults()" id="go-search"><i class="glyphicon glyphicon-search"></i></a>
-  </span>
+<div id="small-home" class="text-center">
+  <h1 id="welcome-text">Welcome to <br/>SURP Online Resources</h1>
+  <div class="input-group input-group-lg">
+    <input type="text" class="form-control" placeholder="Search for..." ng-model="searchbox" id="searchbox" onkeypress="if (event.which==13) document.getElementById('go-search').click()">
+    <span class="input-group-btn">
+      <a href="#search?q={{ searchbox }}" class="btn btn-info" role="button" id="go-search"><i class="glyphicon glyphicon-search"></i></a>
+    </span>
+  </div>
 </div>
-
-

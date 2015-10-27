@@ -2,11 +2,8 @@ header
   margin-bottom: 20px
   margin-top: 20px
 
-.nav li
+.nav li a
   vertical-align: middle
-
-.nav-pills li a
-  height: 100%
 
 .navbar .nav
   font-size: 1em
@@ -19,6 +16,9 @@ header
 #horizontal-nav
   background: #FFF
   border: none
+
+#main
+  margin-bottom: 20px
 
 #template-head
   margin-bottom: 10px
@@ -38,10 +38,37 @@ header
   padding: 10px 12px
   pointer-events: none
 
+#small-home
+  padding-top: 30px
+
+#welcome-text
+  margin-bottom: 30px
+
+.table
+  margin-bottom: 0
+
+#search-page-box
+  margin-bottom: 15px
+
 @media screen and (min-width: 768px)
   #vertical-nav
     display: none
+  
   .navbar .nav
     font-size: 1.25em
+  
   .dropdown-menu
     font-size: 1em
+  
+  #main
+    margin-top: 0
+ 
+  #small-home
+    display: none
+
+@media screen and (max-width: 767px)
+  #large-home
+    display: none
+  
+  #main
+    margin-top: 60px
